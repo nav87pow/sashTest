@@ -1,92 +1,130 @@
-body {
-  font-family: Work Sans;
-  font-size: 17px;
-  line-height: 1.3;
-  background-color: #000000;
-  color: #ffffff;
 
-  max-width: 100vw;
+@font-face {
+    font-family: 'Galano Classic Alt Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Galano Classic Alt Bold'), url('GalanoClassicAltBold.woff') format('woff');
+    }
+@font-face {
+  font-family: 'MaisonNeue-Black';
+  src: url(./MaisonNeue-Black.woff) format('woff');
+}
+@font-face {
+  font-family: 'MaisonNeue-Bold';
+  src: url(./MaisonNeue-Bold.woff) format('woff');
 }
 
-.header{z-index: 7; position: fixed;}
-.logo{width:14vw ;float: left;padding: 1vh 2vw;margin: 2vh 2vw;}
-a{color: #fff;text-decoration: none; text-transform: uppercase;padding: 1vh 1vw;}
-.header a{font-weight: 700; }
-.projectButton{position: fixed;left: 85vw;top: 3vh;}
-.aboutButton{position: fixed;transform: rotate(-90deg);bottom: 15vh;left: 0;}
-.header a:hover{border: 1px solid #fff; border-radius: 5vh;font-weight: 200;}
-
-.slideshow {position: relative; overflow: hidden;width: 100vw; height:80vh;  padding: 1vh 1vw;}
-
-.items {position: relative; top: 0;left: 0;
- width: 10000vw; height: 80vh;transition: left 1s;}
-
-.arrows{position: fixed;top: 50%;transform: translateY(-50%);width: 80vw;margin: 1vh 10vw;}
-.arrows a{color: #999999; box-sizing: border-box; border-radius: 5vh;background-color: rgba(153, 153, 153, 0.8);}
-.arrowsleft{float: left;}
-.arrowsright{float: right;}
+@font-face {
+  font-family: 'MaisonNeue-Medium';
+  src: url(./MaisonNeue-Medium.woff) format('woff');
+}
+@font-face {
+  font-family: 'MaisonNeue-Demi';
+  src: url(./MaisonNeue-Demi.woff) format('woff');
+}
 
 
-
-.slide {float: left;width: 100vw;height: 80vh;position: fixed;top: 0;left: 0;}
-
- .front{width: 100vw;height: 100vh; }
- .front h1{text-transform: uppercase;font-size: 17em;text-align: center;
-position: fixed;top: 50%;transform: translate(-50%, -50%);left: 50%; }
- .imageclick{position: fixed;width: 45vw;top: 50%;left: 50%;
-   transform:translate(-50%, -50%) rotate(-5deg);
-   transition:  all 1s ease; }
- .imageclick:hover{transform:translate(-50%, -50%) rotate(7deg);opacity: 0;}
- .front p{width: 35vw;position: fixed;bottom: 10vh;right: 5vw;}
-
-.info{width: 100vw;height: 100vh;
-position: fixed;top: 0;left: 0;pointer-events: none;}
-.infofirst{width: 100vw;height: 100vh;display: flex;flex-direction: column;flex-wrap: no-wrap;opacity: 0;}
-.infocover{flex: 75%;max-height: 75vh;height: 100%;width: 100%;}
-.infoitro{flex: 25%;background-color:#000; 
-text-align: center;z-index: 3;}
-
-/*adding clalss in js */
-.infoaddopacity{opacity: 1;pointer-events: auto ;}
-
-.infolayout{height: 15vh;width: 85vw;display: flex;flex-direction: row;
-  flex-wrap: nowrap;margin: 3vh 5vw;justify-content: space-between;}
-.work{display: flex;flex-direction: row;
-width: 100vw;}
-.worklayout{flex: 50%;display: flex;flex-direction: column;padding: 0 3vw;}
-.field{display: flex;flex-direction: row;justify-content: space-between;}
-.field h3{background-color: #333333;border-radius: 25vh;padding: 1vh 1vw;}
-table{text-align: left;width: 100%;font-size: 0.8em;margin-top: 2vh;}
-td{padding-bottom: 1vh;}
-.worktitle{flex: 35%;display: inline;text-align: left;margin: 0 2vw;}
-.worktitle h2{font-size: 3em;letter-spacing: 0.1vw;margin-bottom: 0.5vh;}
-.worktitle p{}
-.infoopenmore{flex: 10%;display: flex;
-  width: 10vw;align-self: center;
-font-size: 6em;justify-content: center;align-items: stretch;}
-.infoopenmore:hover{transform: sccale(1.2);}
+body {
+  font-family: 'MaisonNeue-Medium';
+	font-size: 18px;
+	line-height: 1.5;
+	letter-spacing: -0.01vw;
+	background-color: #0E0E0E;
+	color: #F2F2F2;
+	margin:7.5vh 4vw;
+	width: 92vw;
+}
 
 
+header img{max-width: 7vw;float: left;}
+header nav{width:85vw;float: left;text-align: center;}
+header nav a{text-decoration: none;color:#F2F2F2;padding:0.5vh 1.2vw;margin: 0 2vw;}
+
+header nav a.selected{box-sizing: border-box;padding: 0.5vh 2.5vw;border-radius: 5vh;border: 0.01vh solid #F2F2F2; }
+
+/*home page*/
+h1{color: #1E1E1E;font-size: 9em;letter-spacing: -0.5vw;line-height: 1.15;z-index: -1;
+position: fixed;}
+.info{max-width: 28vw;position: fixed;bottom:7vh;right: 7vw;}
+.info a{text-align: center; box-sizing: border-box; 
+  padding: 1vh 0; background-color: whitesmoke; 
+  width: 95%;display: block; margin: 2vh 0;border-radius: 5vh;
+text-decoration: none;background-color: rgba(51, 51, 51, 0.71);;color: #F2F2F2; }
+
+/*about page*/
+/*about "heroqcover area"*/
+.abotcover img{ z-index: -2;width: 42vw;position: fixed;
+top: 50%;left: 50%;transform: translate(-50%,-50%);text-align: center;}
+.abotcover h2{ z-index: -1;width: 80vw;position: fixed;  
+font-family: 'MaisonNeue-Demi';font-size: 12em;
+top: 50%;left: 50%;transform: translate(-50%,-50%);text-align: center;}
+/*about info/pointarea*/
+.aboutinfo{width: 70vw;position: fixed;  
+bottom: 12vh;left: 50%;transform: translateX(-50%);}
+.aboutfirst{position: relative; }
+.aboutforstapp{position: absolute;top: 0;opacity: 0;}
+.about3point{/*overflow: hidden;*/}
+.aboutpoint{float: left;width: 32%;display: flex; flex-direction: row;margin-top: 4vh;}
+.aboutpoint h4{font-size: 2em;color: #595959;  font-family: 'MaisonNeue-Bold';
+margin-right: 1vw;margin-top: -2vh;letter-spacing: 0.14vw;}
+
+/*projects page*/
+/*projects frame line*/
+.holder{position: relative;height: 70vh;max-height: 80vh;width: 100vw;overflow: hidden;}
+.projects{ height: 70vh;width: 300vw; }
+/*project cover */
+.project{float: left;width: 100vw; max-height: 80vh;height:70vh;position: relative;top: 0;left: 0;}
+.projectname{display: inline;position: absolute;top: 50%;left: 55%;
+  transform: translate(-50%,-50%);width: 105vw;  font-family: 'MaisonNeue-Demi';
+font-size: 9em;	color: #F2F2F2; animation: fadein 5s;}
+.projectcover{width: 55%;position: absolute;transition-duration: 3s;
+top: 50%;left: 50%;transform: translate(-50%,-50%);transition: all 0.8s ease;}
+.projectcover:hover{filter: grayscale(50%);transform: rotate(-5deg)translate(-45%,-50%);opacity: 0.7;}
+.projectdisc{max-width: 28vw;position: absolute;bottom:7vh;right: 7vw;}
+.arrow{position: fixed;top: 25%;left: 50%;transform: translateX(-50%);
+width: 90vw;text-align: center;}
+.prev{float: left;text-decoration: none;color: #696969;}
+.next{float: right;text-decoration: none;color: #696969;}
 
 
-.infomore{ width:100vw;height: 100vh;position: fixed;
-  top: 0;left: 0;padding: 2vh 2vw;
-  opacity: 0;pointer-events: none;z-index: 3;}
-.infomorelayout { width: 85vw;display: flex;flex-direction: row;flex-wrap: no-wrap;position: relative; top: 20vh;margin: 0 5vw;align-content: center;}
-.preview{flex: 50%;padding: 0 3vw;width: 35vw;}
-.preview .field{margin-top: 3vh;}
-.preview table{margin-top: 2vh;}
-.preview img{width: 80%;margin-top: 4vh;}
-.text{flex: 50%;text-align: left;width: 40vw;padding: 0 3vw;}
-.text h2{font-size: 4em;margin-bottom:2vh; }
-.text h4{font-size: 1.5em;margin-bottom:5vh; }
-.text p{line-height: 1.3em;margin-bottom: 1.4vh;font-size: 0.8em;}
-.closeinfomore{position: fixed;color: #fff;width: 10vw;font-size: 6em;top: 10vh;right: 5vw;}
-.closeinfomore:hover{transform: sccale(1.2);}
+@keyframes fadein{
+  0%{z-index: 2;opacity: 1;}
+  80%{opacity: 0.9;}
+  50%{opacity: 0.7;z-index: 1;}
+  100%{z-index: -1;opacity: 1;}
+}
 
-/*taggle clalss in js */
-.infoshowmore{opacity: 1;pointer-events: auto;}
+@media(max-width:780px){
+  body{margin:2.5vh 3.2vw;}
+ header a img{max-width: 20vw;float: left;}
+header nav{max-width:100vw;max-height:100vh;float: none;text-align: center;position: fixed;bottom: 3.5vh;}
+header nav a{text-decoration: none;color:#F2F2F2;margin: 2vh 4vw;padding: 3.5vh 7vw;}
+  
+header nav a.selected{padding: 1vh 10vw;border: 0.1vh solid #F2F2F2;}
+  
+h1{color: #1E1E1E;font-size: 4em;top: 14vh;line-height: 1.04;}
+  .info{max-width: 94vw;width: 92vw;bottom:10vh;right: inherit;}
+  
+  .abotcover img{ width: 120vw;}
+  .abotcover h2{font-size: 6em;}
+  .aboutinfo{width: 75vw;bottom: -7vh;transition:all 1s; max-height: 120vh;}
+    .popaboutinfo{bottom: 12vh;background-color: #0E0E0E;box-shadow: 5px 10px 30px #0E0E0E;}
+  .aboutforst{opacity: 0;}
+  .aboutforstapp{opacity: 1;}
+  .aboutpoint{width: 100%;margin-top:2vh;transition:all 1s;}
 
-/*taggle clalss in js */
-.infohide{opacity: 0;}
+  .about3point{margin-top: -4vh;}
+  nav.about{background-color: #0E0E0E;z-index: 5;bottom: 0;
+    padding-bottom: 5vh;padding-top: 4vh;}
+  
+  .projectsnav{position: fixed;top: 94vh;z-index: 4;}
+  .project{max-height: 75vh;}
+  .projectname{left: 60%;transform: translate(-50%,-70%);width: 120vw;font-size: 6em;
+    animation: fadein 3s;line-height: 1;}
+  .projectcover {width: 85%;}
+  .projectdisc{max-width: 80vw;bottom:0;left: 0;}
+  .arrow{top: 18%;}
+}
+
+
 
