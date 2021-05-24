@@ -41,7 +41,6 @@ $('.prev').on('click', function(){
  previousSlide()
 })
  var slideNumber=currentSlide + 1
-$('.steps').text(slideNumber + ' / ' + totalSlide ) 
 
 $('body').on('keydown', function(event){
   var keyCode = event.keyCode

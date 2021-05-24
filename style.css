@@ -35,7 +35,7 @@ body {
 	width: 92vw;
 }
 
-
+header{position: fixed;z-index: 5;}
 header img{max-width: 7vw;float: left;}
 header nav{width:85vw;float: left;text-align: center;}
 header nav a{text-decoration: none;color:#F2F2F2;padding:0.5vh 1.2vw;margin: 0 2vw;}
@@ -69,8 +69,9 @@ bottom: 12vh;left: 50%;transform: translateX(-50%);}
 margin-right: 1vw;margin-top: -2vh;letter-spacing: 0.14vw;}
 
 /*projects page*/
+
 /*projects frame line*/
-.holder{position: relative;height: 70vh;max-height: 80vh;width: 100vw;overflow: hidden;}
+.holder{position: fixed;height: 70vh;max-height: 80vh;width: 100vw;overflow: hidden;top: 21vh;}
 .projects{ height: 70vh;width: 300vw; }
 /*project cover */
 .project{float: left;width: 100vw; max-height: 80vh;height:70vh;position: relative;top: 0;left: 0;}
@@ -87,6 +88,36 @@ width: 90vw;text-align: center;}
 .next{float: right;text-decoration: none;color: #696969;}
 
 
+.close{position: fixed;top: 21vh;opacity: 0;pointer-events: none; }
+/*project info section */
+.moreinfo{position: relative;top: -3.5vh;left:0;max-width: 98vw; opacity: 0;pointer-events: none; }
+/*BGheadline title*/
+.projectheaderinfo{z-index: -2;}
+/*title project + label */
+.moreinfoin{width: 60vw;position: absolute;top: 28vh;left: 48%;transform: translateX(-50%);}
+.moreinfoheader{display: flex;flex-direction: row;justify-content: space-between;}
+.titleproject h2{font-size: 1.7em;  font-family: 'MaisonNeue-Demi';}
+.labelpart{display: flex;flex-direction: row;margin-bottom: 3.5vh;}
+.label{background-color: #1E1E1F;border-radius: 5vh;font-size: 0.7em;
+  margin-top: 1.7vh;margin-bottom: 0.5vh; margin-right: 2vh;padding: 0.6vh 2vw; }
+/*info about the project */
+.infolarg{display: flex;flex-direction: row;justify-content: space-between;}
+.infotext{flex: 65;margin-right: 2.5vw;}
+.infotext p{margin-bottom: 2.8vh;}
+.shouttext h2{font-size: 3.1em;line-height: 1.2;letter-spacing: -0.18vw;margin-bottom: 2.8vh;}
+.coverheadimg{flex: 35;}
+.coverheadimg img{box-shadow: 5px 5px 15px rgba(242, 242, 242, 0.06);}
+.showcase h3{margin-bottom: 2.8vh;font-family: 'MaisonNeue-Demi';}
+.screenshoot{float: left;width: 100%;}
+.screenshoot img{width: 30%;margin-right: 1.5vw;margin-bottom: 2.8vh;}
+/*every 3 image in "showcase" class="screenshot" dont make margin-right */
+.screenshoot img:nth-child(3n+0){margin-right: 0;}
+.process{margin-bottom: 2.8vh;}
+.process h3{margin-bottom: 2.8vh;font-family: 'MaisonNeue-Demi';}
+.process ul{margin-left: 1.5vw;}
+.process li{font-size: 0.7em;margin-bottom: 0.5vh;}
+.hide{opacity: 0;pointer-events: none;}
+.visible{opacity: 1;pointer-events: auto;}
 @keyframes fadein{
   0%{z-index: 2;opacity: 1;}
   80%{opacity: 0.9;}
@@ -117,13 +148,25 @@ h1{color: #1E1E1E;font-size: 4em;top: 14vh;line-height: 1.04;}
   nav.about{background-color: #0E0E0E;z-index: 5;bottom: 0;
     padding-bottom: 5vh;padding-top: 4vh;}
   
+
   .projectsnav{position: fixed;top: 94vh;z-index: 4;}
+  .holder{top: 14vh;}
   .project{max-height: 75vh;}
   .projectname{left: 60%;transform: translate(-50%,-70%);width: 120vw;font-size: 6em;
     animation: fadein 3s;line-height: 1;}
   .projectcover {width: 85%;}
   .projectdisc{max-width: 80vw;bottom:0;left: 0;}
   .arrow{top: 18%;}
+  
+  .moreinfoin {width: 80vw;left: 50%;}
+  .infolarg {flex-direction: column;justify-content: flex-start;}
+  .screenshoot img { width: 45%;}
+  .coverheadimg {flex: 0;position: relative;left:50%;transform: translateX(-50%);margin-bottom: 2.8vh;}
+  .screenshoot img:nth-child(2n+0){margin-right: 0;}
+  .screenshoot img:nth-child(3n+0){margin-right: 1.5vw;}
+  .labelpart{flex-wrap: wrap;}
+  .label{font-size: 0.6em;}
+  .shouttext h2 {font-size: 2.1em;line-height: 1.05;}
 }
 
 
